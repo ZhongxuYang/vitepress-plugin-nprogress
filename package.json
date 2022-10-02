@@ -1,0 +1,41 @@
+{
+  "name": "vitepress-plugin-nprogress",
+  "version": "0.0.1",
+  "description": "nprogress plugin for vitepress",
+  "keywords": [
+    "documentation",
+    "ngrogress",
+    "vue",
+    "vitepress"
+  ],
+  "author": "ZhongxuYang <himatthew@foxmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhongxuYang/vitepress-plugin-nprogress.git"
+  },
+  "homepage": "https://github.com/ZhongxuYang/vitepress-plugin-nprogress.git",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild"
+  },
+  "dependencies": {
+    "nprogress": "^0.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "unbuild": "^0.8.11",
+    "vitepress": "^1.0.0-alpha.18"
+  }
+}
