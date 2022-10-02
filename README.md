@@ -32,4 +32,19 @@ export default {
 }
 ```
 
+## Tips
+If got `TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension ".css" for ***/node_modules/nprogress/nprogress.css` error when you build, 
+
+you can config like this in your `vite.config.ts`:
+```ts
+// vite.config.ts
+import {defineConfig} from 'vite'
+
+export default defineConfig({
+  ssr: {
+    noExternal: ['vitepress-plugin-nprogress']
+  },
+})
+```
+
 Then you can use `nprogress` ! 🎉
