@@ -1,5 +1,5 @@
 import nprogress from 'nprogress'
-import 'nprogress/nprogress.css'
+import './nprogress.css'
 // import type {EnhanceAppContext} from 'vitepress'
 
 const vitepressNprogress = (ctx: any) => {
