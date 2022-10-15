@@ -1,6 +1,6 @@
 {
   "name": "vitepress-plugin-nprogress",
-  "version": "0.0.3",
+  "version": "0.0.3-0",
   "description": "nprogress plugin for vitepress",
   "keywords": [
     "documentation",
