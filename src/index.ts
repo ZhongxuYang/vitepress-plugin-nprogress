@@ -1,8 +1,9 @@
 import nprogress from 'nprogress'
-import 'nprogress/nprogress.css'
-// import type {EnhanceAppContext} from 'vitepress'
+// import 'nprogress/nprogress.css'
+import './nprogress.css'
+import type {EnhanceAppContext} from 'vitepress'
 
-const vitepressNprogress = (ctx: any) => {
+const vitepressNprogress = (ctx: EnhanceAppContext) => {
   if (typeof window === 'undefined') return
   
   const {router} = ctx

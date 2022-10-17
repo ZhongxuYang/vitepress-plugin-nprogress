@@ -24,7 +24,9 @@ yarn add -D vitepress-plugin-nprogress
 // .vitepress/theme/index.ts
 
 import DefaultTheme from "vitepress/theme"
+
 import vitepressNprogress from 'vitepress-plugin-nprogress'
+import 'vitepress-plugin-nprogress/lib/css/index.css'
 
 export default {
   ...DefaultTheme,

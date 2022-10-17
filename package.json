@@ -13,29 +13,31 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    }
+      "import": "./lib/vitepress-plugin-nprogress.js",
+      "require": "./lib/vitepress-plugin-nprogress.umd.cjs"
+    },
+    "./*": "./*"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ZhongxuYang/vitepress-plugin-nprogress.git"
   },
   "homepage": "https://github.com/ZhongxuYang/vitepress-plugin-nprogress.git",
-  "main": "./dist/index.cjs",
-  "types": "./dist/index.d.ts",
+  "main": "./lib/vitepress-plugin-nprogress.umd.cjs",
+  "types": "./lib/index.d.ts",
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
-    "build": "unbuild"
+    "build": "vite build && tsc -p tsconfig.build.json"
   },
   "dependencies": {
     "nprogress": "^0.2.0"
   },
   "devDependencies": {
+    "@babel/types": "^7.19.4",
+    "@types/node": "^18.11.0",
     "typescript": "^4.8.4",
-    "unbuild": "^0.8.11",
     "vitepress": "^1.0.0-alpha.18"
   }
 }
