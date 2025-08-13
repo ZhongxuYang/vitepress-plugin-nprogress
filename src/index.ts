@@ -10,13 +10,18 @@ const vitepressNprogress = (ctx: EnhanceAppContext) => {
   setTimeout(() => {
     nprogress.configure({ showSpinner: false })
 
+    // Compatible with Vitepress v1.6.0+ 
+    // https://github.com/vuejs/vitepress/blob/v1.6.0/src/client/app/router.ts
+    const afterRouteChangeEventName = router.onBeforeRouteChange ? 'onAfterRouteChange' : 'onAfterRouteChanged'
+
     const cacheBeforeRouteChange = router.onBeforeRouteChange
-    const cacheAfterRouteChange = router.onAfterRouteChanged
+    const cacheAfterRouteChange = router[afterRouteChangeEventName]
+
     router.onBeforeRouteChange = (to) => {
       nprogress.start()
       cacheBeforeRouteChange?.(to)
     }
-    router.onAfterRouteChanged = (to) => {
+    router[afterRouteChangeEventName] = (to) => {
       nprogress.done()
       cacheAfterRouteChange?.(to)
     }

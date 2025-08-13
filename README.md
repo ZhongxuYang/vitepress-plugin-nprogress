@@ -15,8 +15,9 @@
 
 ## Install
 ```sh
-yarn add -D vitepress-plugin-nprogress
-# OR npm install -D vitepress-plugin-nprogress
+pnpm add vitepress-plugin-nprogress
+# OR yarn add vitepress-plugin-nprogress
+# OR npm install vitepress-plugin-nprogress
 ```
 
 ## Usage
