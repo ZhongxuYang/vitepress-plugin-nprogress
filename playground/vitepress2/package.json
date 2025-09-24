@@ -1,0 +1,19 @@
+{
+  "name": "vitepress2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "vitepress": "2.0.0-alpha.12",
+    "vitepress-plugin-nprogress": "workspace:*"
+  }
+}

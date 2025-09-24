@@ -1,6 +1,6 @@
 {
   "name": "vitepress-plugin-nprogress",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "nprogress plugin for vitepress",
   "keywords": [
     "documentation",
@@ -29,7 +29,10 @@
     "lib"
   ],
   "scripts": {
-    "build": "vite build && tsc -p tsconfig.build.json"
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "dev:vitepress1": "pnpm --filter ./playground/vitepress1 docs:dev",
+    "dev:vitepress2": "pnpm --filter ./playground/vitepress2 docs:dev",
+    "dev": "pnpm run dev:vitepress2"
   },
   "dependencies": {
     "nprogress": "^0.2.0"
