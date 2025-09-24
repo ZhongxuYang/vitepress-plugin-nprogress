@@ -10,6 +10,9 @@ node_modules
 pnpm-global
 demo
 
+.vitepress/cache
+.vitepress/dist
+
 ### Node template
 # Logs
 logs

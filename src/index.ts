@@ -12,7 +12,7 @@ const vitepressNprogress = (ctx: EnhanceAppContext) => {
 
     // Compatible with Vitepress v1.6.0+ 
     // https://github.com/vuejs/vitepress/blob/v1.6.0/src/client/app/router.ts
-    const afterRouteChangeEventName = ('onAfterRouteChange' in router) ? 'onAfterRouteChange' : 'onAfterRouteChanged'
+    const afterRouteChangeEventName = ('onAfterRouteChanged' in router) ? 'onAfterRouteChanged' : 'onAfterRouteChange'
 
     const cacheBeforeRouteChange = router.onBeforeRouteChange
     const cacheAfterRouteChange = router[afterRouteChangeEventName]
